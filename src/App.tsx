@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { Navbar } from './components/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Store } from './pages/Store';
+import { Container } from 'react-bootstrap';
+import { About } from './pages/About';
+import { Provider as ProviderItem } from './context/ContextItems';
+import { Provider as ProviderArtist } from './context/ContextArtist';
+import { Provider as ProvidershoppingCart } from './context/ContextItems';
+import { ShoppingCartProvider } from './context/ShoppingCartContext';
+import { Footer } from './components/footer/Footer';
 
-function App() {
+
+
+const App =() =>{
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ProvidershoppingCart>
+      <ShoppingCartProvider>
+      <ProviderArtist>
+      <ProviderItem>
+        <Navbar/>
+        <Container className="mb-5" fluid="true">
+          <Routes>
+              <Route path="/" element={<Home/>} />
+              <Route path="store" element={<Store/>} />
+              <Route path="about" element={<About/>} />
+          </Routes>
+        </Container>
+        <Footer />
+      </ProviderItem> 
+      </ProviderArtist>
+      </ShoppingCartProvider>
+      </ProvidershoppingCart>
+    </>
   );
 }
 
