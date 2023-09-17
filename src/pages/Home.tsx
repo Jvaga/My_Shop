@@ -2,7 +2,6 @@ import React from "react"
 import { Col, Row } from "react-bootstrap";
 
 
-import { Card } from "../components/cards/cardItem/Card"
 import {  useData } from "../context/ContextItems";
 import { Gallery } from "../components/carousel/CarouselGallery";
 import { Socials } from "../components/socials/Socials";
