@@ -13,7 +13,7 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button`
-  margin-bottom: 1em;
+  margin: 1em;
 `;
 
 export const InputGroup = styled.div`

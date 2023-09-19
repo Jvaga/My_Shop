@@ -45,14 +45,14 @@ export const LogIn = React.forwardRef((props: LogInProps) => {
           </InputGroup>
           <Container>
             <Button type="button" onClick={props.onClickSummit}>
-              login
+              Login
             </Button>
           </Container>
         </form>
         <Container>
           <p>
-            necesita una cuenta?{" "}
-            <button onClick={props.onClick}>crear cuenta</button>
+            Don't have an account yet?{" "}
+            <Button onClick={props.onClick}>create Account</Button>
           </p>
         </Container>
       </LogInSection>

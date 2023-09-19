@@ -1,9 +1,8 @@
 const CURRENCY_FOTMATTER = new Intl.NumberFormat(undefined, {
-    currency: "EUR",
-    style: "currency"
-})
+  currency: "EUR",
+  style: "currency",
+});
 
-
-export function formatCurrency(number: number)  {
-    return CURRENCY_FOTMATTER.format(number)
+export function formatCurrency(number: number) {
+  return CURRENCY_FOTMATTER.format(number);
 }

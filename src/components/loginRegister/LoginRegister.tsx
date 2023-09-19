@@ -23,8 +23,6 @@ export const LoginRegister = (props: LoginFromProps) => {
   const [logIn, setLogin] = useState(true);
 
   const summitLogIn = async () => {
-    console.log("login");
-
     let email = emailRef.current?.value;
     let password = refPas.current?.value;
 
@@ -82,7 +80,6 @@ export const LoginRegister = (props: LoginFromProps) => {
               refEmail={emailRef}
               refPas={refPas}
             />
-            {console.log("en loglin", emailRef.current?.value)}
           </>
         ) : (
           <Register

@@ -58,14 +58,14 @@ export const Register = (props: RegisterFromProps) => {
         </InputGroup>
         <Container>
           <Button type="button" onClick={props.onClickSummit}>
-            register
+            Create Account
           </Button>
         </Container>
       </form>
       <Container>
         <p>
-          iniciar secion?{" "}
-          <button onClick={props.onClick}>iniciar secion</button>
+          Do you already have an account?{" "}
+          <Button onClick={props.onClick}>Login</Button>
         </p>
       </Container>
     </RegisterSection>

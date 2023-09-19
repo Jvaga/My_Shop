@@ -1,34 +1,116 @@
-
 import React from "react";
-import {  P,   TitleWrapper, Title,  Img, Cardbox } from "./Card.css";
+import {
+  ProductCard,
+  Babge,
+  ProductTumb,
+  ProductImg,
+  ProductDetails,
+  ProductCategory,
+  A,
+  P,
+  ProductBottomDetails,
+  ProductPrice,
+  Small,
+  ProductLinks,
+  ProductLinksA,
+  ProductBottomDetailsDiv,
+  AddToCartButton,
+  QuantityButton,
+  RemoveButton,
+} from "./Card.css";
+import { useShoppingCart } from "../../../context/ShoppingCartContext";
 import { formatCurrency } from "../../../utilities/formatCurrency";
-import { useData } from "../../../context/ContextItems";
-
 
 type CardProps = {
-    id?: number
-    quantity?: number
-    color?: string
-    name?: string
-    description: string
-    price?:number
-    img?:string
-
-  }
-
-
+  _id: number;
+  name?: string;
+  price?: number;
+  img?: string;
+  artist?: string;
+  description?: string;
+  isStore: boolean;
+};
 
 export const Card = (props: CardProps) => {
-  // const {removeFromCart} = useData()
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeFromCart,
+  } = useShoppingCart();
 
+  let quantity = getItemQuantity(props._id);
   return (
-    <Cardbox>
-      <TitleWrapper><Title>{props.name}</Title></TitleWrapper >
-     
-      <Img  src={props.img}  alt="foto"  />
+    <>
+      <ProductCard className="product-card">
+        <Babge className="badge">Bestseller</Babge>
+        <ProductTumb className="product-tumb">
+          <ProductImg src={props.img} alt="" />
+        </ProductTumb>
+        <ProductDetails className="product-details">
+          <ProductCategory className="product-catagory">
+            {props.artist}
+          </ProductCategory>
+          <h4>
+            <A href="">{props.name}</A>
+          </h4>
+          <P>{props.description}</P>
+          <ProductBottomDetails className="product-bottom-details">
+            {props.isStore ? (
+              <ProductBottomDetailsDiv>
+                <ProductPrice className="product-price">
+                  <Small>$96.00</Small>${props.price}
+                </ProductPrice>
 
-      <P>{props.description}</P>
-      <P>{props.price} €</P>
-    </Cardbox>
+                <ProductLinks className="product-links">
+                  <ProductLinksA href="">
+                    <i className="fa fa-heart">1</i>
+                  </ProductLinksA>
+                </ProductLinks>
+              </ProductBottomDetailsDiv>
+            ) : null}
+
+            <div>
+              {props.isStore ? (
+                quantity === 0 ? (
+                  <AddToCartButton
+                    onClick={() => increaseCartQuantity(props._id)}
+                  >
+                    + Add To Cart
+                  </AddToCartButton>
+                ) : (
+                  <div
+                    className="d-flex align-items-center flex-column"
+                    style={{ gap: ".5rem" }}
+                  >
+                    <div
+                      className="d-flex align-items-center justify-content-center"
+                      style={{ gap: ".5rem" }}
+                    >
+                      <QuantityButton
+                        onClick={() => decreaseCartQuantity(props._id)}
+                      >
+                        -
+                      </QuantityButton>
+                      <div>
+                        <span className="fs-3">{quantity}</span> in cart
+                      </div>
+                      <QuantityButton
+                        onClick={() => increaseCartQuantity(props._id)}
+                      >
+                        +
+                      </QuantityButton>
+                    </div>
+                    <RemoveButton onClick={() => removeFromCart(props._id)}>
+                      Remove
+                    </RemoveButton>
+                  </div>
+                )
+              ) : null}
+            </div>
+          </ProductBottomDetails>
+        </ProductDetails>
+      </ProductCard>
+    </>
   );
 };
