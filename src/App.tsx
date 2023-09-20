@@ -11,6 +11,7 @@ import { Provider as ProvidershoppingCart } from "./context/ContextItems";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { Footer } from "./components/footer/Footer";
 import { Login } from "./pages/Login";
+import { Checkout } from "./pages/Checkout";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
                   <Route path="store" element={<Store />} />
                   <Route path="about" element={<About />} />
                   <Route path="login" element={<Login />} />
+                  <Route path="checkout" element={<Checkout />} />
                 </Routes>
               </Container>
               <Footer />
