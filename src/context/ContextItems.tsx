@@ -11,7 +11,7 @@ interface Data {
   color: string;
   price: number;
   description: string;
-  name: string;
+  name: string | undefined;
   img: string;
 }
 

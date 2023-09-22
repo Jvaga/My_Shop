@@ -12,6 +12,7 @@ import { Card } from "../components/cards/cardItem/Card";
 
 export const Store = () => {
   const data = useData();
+  console.log(data);
 
   return (
     <>
