@@ -6,8 +6,7 @@ import { Socials } from "../../components/socials/Socials";
 import { Payment } from "../../components/payment/Payment";
 
 import { ContainerCenter } from "./Home.css";
-// import { H2 } from "../../components/atoms/text/text.css";
-import { BackgroundlightBlue } from "../../components/atoms/background/Background.css";
+// import { BackgroundlightBlue } from "../../components/atoms/background/Background.css";
 import { Card } from "../../components/cards/cardItem/Card";
 import { Flayer } from "../../components/flayer/Flayer";
 export const Home = () => {
@@ -19,7 +18,7 @@ export const Home = () => {
       <Flayer />
       <Socials />
 
-      <BackgroundlightBlue>
+      <div>
         <ContainerCenter>
           <h2>Our Best Seller</h2>
         </ContainerCenter>
@@ -34,7 +33,7 @@ export const Home = () => {
             </Col>
           ))}
         </Row>
-      </BackgroundlightBlue>
+      </div>
 
       <Payment />
     </>
