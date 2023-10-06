@@ -1,11 +1,12 @@
 import { styled } from "styled-components";
+import { Colors } from "../../../App.css";
 
 export const RegisterSection = styled.section`
   width: 320px;
   border-radius: 0.75rem;
-  background-color: rgba(17, 24, 39, 1);
+  background-color: ${Colors.light_grey};
   padding: 2rem;
-  color: rgba(243, 244, 246, 1);
+  color: ${Colors.black};
 `;
 export const Form = styled.form``;
 export const Container = styled.div`
@@ -23,24 +24,17 @@ export const InputGroup = styled.div`
 `;
 export const LabelRegister = styled.label`
   display: block;
-  color: rgba(156, 163, 175, 1);
+  color: ${Colors.black};
   margin-bottom: 4px;
 `;
 export const InputRegister = styled.input`
   width: 100%;
   border-radius: 0.375rem;
-  border: 1px solid rgba(55, 65, 81, 1);
+  border: 1px solid ${Colors.grey};
   outline: 0;
-  background-color: rgba(17, 24, 39, 1);
+  background-color: ${Colors.white};
   padding: 0.75rem 1rem;
-  color: rgba(243, 244, 246, 1);
-`;
-export const LogInSection = styled.section`
-  width: 320px;
-  border-radius: 0.75rem;
-  background-color: rgba(17, 24, 39, 1);
-  padding: 2rem;
-  color: rgba(243, 244, 246, 1);
+  color: ${Colors.black};
 `;
 
 export const Formwrapper = styled.div`

@@ -1,119 +1,183 @@
 import { styled } from "styled-components";
+import { breakpoints } from "../../../App.css";
+import { Colors } from "../../../App.css";
 
-export const Conteiner = styled.section`
-  /* background-color: aliceblue; */
-  margin: 5rem;
+export const Container = styled.section`
   display: flex;
-`;
-export const GalleryWrapper = styled.div`
-  /* background-color: blue; */
-  width: 50%;
+  width: 80%;
   margin: auto;
+
+  @media (max-width: ${breakpoints.large}) {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    width: 100%;
+    margin: auto;
+  }
+`;
+
+export const GalleryWrapper = styled.div`
+  width: 50vw;
+
+  @media (max-width: ${breakpoints.large}) {
+    width: 90%;
+    margin: auto;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+  }
+`;
+
+export const InfoSection = styled.div`
+  width: 50vw;
+  height: fit-content;
+  @media (max-width: ${breakpoints.large}) {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    width: 100%;
+  }
+`;
+export const Title = styled.h1`
+  margin: 20px 0 20px 80px;
+  @media (max-width: ${breakpoints.large}) {
+    margin: 30px auto;
+  }
 `;
 export const InfoWrapper = styled.div`
-  /* background-color: red; */
-  width: 50%;
-  padding: 1rem 4rem 1rem 2rem;
+  background: ${Colors.lighter_grey};
+  box-shadow: 0 2px 7px ${Colors.grey};
+  border-radius: 5px;
+  width: 500px;
+  height: fit-content;
   border: solid 1px;
-  margin-left: 4em;
+  margin-left: 80px;
+
+  @media (max-width: ${breakpoints.large}) {
+    margin: auto;
+  }
+
+  @media (max-width: ${breakpoints.small}) {
+    width: 100%;
+  }
 `;
 
-export const Title = styled.h1`
-  color: gray;
-`;
+export const Variants = styled.div``;
 
-export const Variants = styled.div`
-  /* background-color: yellowgreen; */
-`;
 export const DetailsWrapper = styled.div`
-  /* background-color: antiquewhite; */
-  padding-top: 2em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 1fr 1fr 60px;
-  gap: 0px 0px;
-  grid-template-areas:
-    "precio . favorite"
-    "sizeinfo size ."
-    "pdf pdf pdf"
-    "print print print"
-    "shopinfo shopinfo shopinfo";
-`;
-export const SpanPrice = styled.span`
-  color: black;
-  grid-area: precio;
-  padding-left: 2em;
-`;
-export const SpanSize = styled.span`
-  color: black;
-  grid-area: size;
-`;
-export const SpanInfoSize = styled.span`
-  grid-area: sizeinfo;
-  padding-left: 2em;
+  padding-top: 30px;
 `;
 
-export const PdfBox = styled.div`
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 1em;
+export const SpanPrice = styled.span`
+  color: ${Colors.black};
+  margin-left: 30px;
 `;
-export const PdfWrapper = styled.div`
-  /* background-color: yellow; */
-  grid-area: pdf;
-  padding: 1.5em 2em 1em;
-`;
-export const PrintWrapper = styled.div`
-  /* background-color: azure; */
-  grid-area: print;
-  padding: 1.5em 2em 1em;
-`;
-export const PrintBox = styled.div`
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 1em;
-`;
-export const ShopInfoWrapper = styled.div`
-  /* background-color: bisque; */
-  grid-area: shopinfo;
+
+export const InfoSizeWrapper = styled.div`
+  margin: 20px 30px 20px 30px;
   display: flex;
+  flex-direction: row;
+  gap: 10px;
+`;
+
+export const PdfWrapper = styled.div`
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+`;
+export const PdfBox = styled.div`
+  width: 88%;
+  height: 80%;
+  margin: auto;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+`;
+
+export const PrintWrapper = styled.div`
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+`;
+
+export const PrintBox = styled.div`
+  width: 88%;
+  height: 80%;
+  margin: auto;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 20px;
+`;
+
+export const ShopInfoWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  width: 90%;
+  margin: auto;
+`;
+
+export const QuantityWrapper = styled.div`
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 `;
 
 export const Quantity = styled.input`
-  color: black;
-  width: 3rem;
-  margin-left: 0.5rem;
+  color: ${Colors.black};
+  width: 40px;
+  margin-left: 10px;
+`;
+export const QuantitySpan = styled.span``;
+
+export const CartButtonWrapper = styled.div`
+  display: flex;
+  width: 55%;
+  align-items: center;
+  justify-content: end;
 `;
 
 export const CartButton = styled.button`
-  /* background-color: green; */
-  width: 15.5rem;
-`;
-export const QuantityWrapper = styled.div`
-  width: 50%;
-  display: flex;
-  align-items: center;
-  padding-left: 2rem;
-`;
-export const CartButtonWrapper = styled.div`
-  display: flex;
-  align-items: center;
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+
+  @media (max-width: ${breakpoints.small}) {
+    width: 140px;
+  }
 `;
 
 export const FavoriteButton = styled.button`
-  /* background-color: violet; */
-  height: 2rem;
+  height: 20px;
 `;
+
 export const Img = styled.img`
   width: 100%;
 `;
-export const ImputRadio = styled.input``;
+
+export const InputRadio = styled.input``;
+
 export const ImgBuyOptions = styled.img`
   width: 40px;
 `;
-export const WrapperFavoriteColor = styled.div`
-  grid-area: favorite;
+
+export const FavoriteColorWrapper = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-right: 1rem;
 `;

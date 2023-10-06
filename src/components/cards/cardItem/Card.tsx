@@ -60,7 +60,8 @@ export const Card = (props: CardProps) => {
             {props.isStore ? (
               <ProductBottomDetailsDiv>
                 <ProductPrice className="product-price">
-                  <Small>$96.00</Small>${props.price}
+                  <Small>$96.00</Small>$
+                  {formatCurrency(props.price ? props.price : 10)}
                 </ProductPrice>
 
                 <ProductLinks className="product-links">

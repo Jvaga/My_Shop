@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
-
+import { Colors } from "../../../App.css";
 export const LogInSection = styled.section`
   width: 320px;
   border-radius: 0.75rem;
-  background-color: #dfdfdf;
+  background-color: ${Colors.light_grey};
   padding: 2rem;
-  color: #050505;
+  color: ${Colors.black};
 `;
 
 export const InputGroup = styled.div`
@@ -15,17 +15,17 @@ export const InputGroup = styled.div`
 `;
 export const LabelLogin = styled.label`
   display: block;
-  color: #030303;
+  color: ${Colors.black};
   margin-bottom: 4px;
 `;
 export const InputLogin = styled.input`
   width: 100%;
   border-radius: 0.375rem;
-  border: 1px solid #b2b2b2;
+  border: 1px solid ${Colors.grey};
   outline: 0;
-  background-color: #f9f9f9;
+  background-color: ${Colors.white};
   padding: 0.75rem 1rem;
-  color: #020202;
+  color: ${Colors.black};
 `;
 
 export const Button = styled.button`

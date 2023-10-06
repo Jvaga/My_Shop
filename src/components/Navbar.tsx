@@ -7,9 +7,9 @@ export const Navbar = () => {
   const { openCart, cartQuantity } = useShoppingCart();
 
   return (
-    <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
+    <NavbarBs sticky="top" className="bg-white shadow-sm  py-4 ">
       <Container>
-        <Nav className="me-auto">
+        <Nav className="me-auto fs-4">
           <Nav.Link to="/" as={NavLink}>
             Home
           </Nav.Link>
@@ -19,7 +19,7 @@ export const Navbar = () => {
           </Nav.Link>
 
           <Nav.Link to={"/about"} as={NavLink}>
-            About Artistas
+            Our Artists
           </Nav.Link>
           <Nav.Link to={"/login"} as={NavLink}>
             Login
