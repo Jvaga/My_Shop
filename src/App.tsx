@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import { Store } from "./pages/store/Store";
@@ -12,7 +11,9 @@ import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { Footer } from "./components/footer/Footer";
 import { Login } from "./pages/login/register/Login";
 import { SingleProduct } from "./pages/singleProduct/SingleProduct";
-import { AppBody } from "./App.css";
+import { AppBody, Header } from "./App.css";
+import { NavBar } from "./components/navbar/NavBar";
+import { ShoppingCart } from "./components/shoppingCart/shopppingCart/ShoppingCart";
 
 const App = () => {
   return (
@@ -21,7 +22,11 @@ const App = () => {
         <ShoppingCartProvider>
           <ProviderArtist>
             <ProviderItem>
-              <Navbar />
+              <Header>
+                <NavBar />
+                <ShoppingCart />
+              </Header>
+
               <Container className="mb-5" fluid="true">
                 <Routes>
                   <Route path="/" element={<Home />} />

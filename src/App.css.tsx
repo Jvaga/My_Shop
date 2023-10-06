@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
 
 export const AppBody = styled.div`
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
 `;
 export const breakpoints = {
@@ -21,3 +21,9 @@ export const Colors = {
   red: "#D9000B",
   white: "#ffffff",
 };
+
+export const Header = styled.div`
+  z-index: 3;
+  position: sticky;
+  top: 0;
+`;

@@ -10,6 +10,7 @@ export const ProductCard = styled.div`
   margin: 50px auto;
   background: ${Colors.lighter_grey};
   border-radius: 10px;
+  padding: 10px;
 
   @media (max-width: ${breakpoints.large}) {
     width: 90%;
@@ -39,6 +40,10 @@ export const ProductTumb = styled.div`
 export const ProductImg = styled.img`
   max-width: 100%;
   max-height: 100%;
+  margin-top: 20px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  box-shadow: 0 2px 7px ${Colors.grey};
 `;
 
 export const ProductDetails = styled.div`
