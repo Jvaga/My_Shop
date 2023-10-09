@@ -34,5 +34,6 @@ export const MenuItem = styled.div`
 
 export const MenuLink = styled(Link)`
   text-decoration: none;
+  font-size: 25px;
   color: ${Colors.black};
 `;

@@ -1,17 +1,21 @@
 import { styled } from "styled-components";
 import { Colors } from "../../../App.css";
+
 export const LogInSection = styled.section`
   width: 320px;
-  border-radius: 0.75rem;
+  border-radius: 10px;
   background-color: ${Colors.light_grey};
-  padding: 2rem;
+  padding: 30px;
+  border: 1px solid ${Colors.black};
   color: ${Colors.black};
 `;
 
 export const InputGroup = styled.div`
-  margin-top: 0.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  margin-top: 20px;
+  font-size: 15px;
+`;
+export const Container = styled.div`
+  text-align: center;
 `;
 export const LabelLogin = styled.label`
   display: block;
@@ -20,17 +24,17 @@ export const LabelLogin = styled.label`
 `;
 export const InputLogin = styled.input`
   width: 100%;
-  border-radius: 0.375rem;
+  border-radius: 10px;
   border: 1px solid ${Colors.grey};
   outline: 0;
   background-color: ${Colors.white};
-  padding: 0.75rem 1rem;
+  padding: 15px 10px;
   color: ${Colors.black};
 `;
 
 export const Button = styled.button`
-  margin: 1em;
-`;
-export const Container = styled.div`
-  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid ${Colors.grey};
+  border-radius: 10px;
 `;

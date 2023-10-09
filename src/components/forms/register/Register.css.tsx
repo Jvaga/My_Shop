@@ -3,24 +3,19 @@ import { Colors } from "../../../App.css";
 
 export const RegisterSection = styled.section`
   width: 320px;
-  border-radius: 0.75rem;
+  border-radius: 10px;
   background-color: ${Colors.light_grey};
-  padding: 2rem;
+  padding: 30px;
   color: ${Colors.black};
+  border: solid 1px ${Colors.black};
 `;
-export const Form = styled.form``;
 export const Container = styled.div`
   text-align: center;
 `;
 
-export const Button = styled.button`
-  margin: 1em;
-`;
-
 export const InputGroup = styled.div`
-  margin-top: 0.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  margin-top: 20px;
+  font-size: 15px;
 `;
 export const LabelRegister = styled.label`
   display: block;
@@ -29,15 +24,21 @@ export const LabelRegister = styled.label`
 `;
 export const InputRegister = styled.input`
   width: 100%;
-  border-radius: 0.375rem;
+  border-radius: 10px;
   border: 1px solid ${Colors.grey};
   outline: 0;
   background-color: ${Colors.white};
-  padding: 0.75rem 1rem;
+  padding: 15px 10px;
   color: ${Colors.black};
 `;
 
 export const Formwrapper = styled.div`
   display: grid;
   place-items: center;
+`;
+export const Button = styled.button`
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid ${Colors.black};
+  border-radius: 10px;
 `;

@@ -1,10 +1,12 @@
 import { styled } from "styled-components";
 
 export const AppBody = styled.div`
-  /* display: flex; */
+  display: flex;
+  contain: paint;
   flex-direction: column;
-  max-height: 100vh;
-  overflow-x: hidden;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 `;
 export const breakpoints = {
   small: "600px",
@@ -26,4 +28,8 @@ export const Header = styled.div`
   z-index: 3;
   position: sticky;
   top: 0;
+`;
+
+export const FooterWrapper = styled.div`
+  margin-top: auto;
 `;

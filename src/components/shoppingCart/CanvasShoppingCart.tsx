@@ -33,12 +33,6 @@ export function ShoppingCart({ isOpen }: ShoppingCartProps) {
             )}
           </div>
         </Stack>
-        <a
-          href="http://localhost:3000/checkout
-        "
-        >
-          Go to Checkout
-        </a>
       </Offcanvas.Body>
     </Offcanvas>
   );

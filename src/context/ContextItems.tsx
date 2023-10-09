@@ -35,7 +35,7 @@ export const Provider = (props: Props) => {
         const response = await axios.get(url);
         setData(response);
       } catch (error) {
-        console.warn("jhonny", error);
+        console.warn(error);
       }
     };
 

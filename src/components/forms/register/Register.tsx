@@ -26,35 +26,20 @@ export const Register = (props: RegisterFromProps) => {
           <LabelRegister aria-hidden={true} htmlFor="name">
             Name:
           </LabelRegister>
-          <InputRegister
-            type="text"
-            id="name"
-            // autoComplete="off"
-
-            ref={props.refName}
-
-            // required
-          />
+          <InputRegister type="text" id="name" ref={props.refName} required />
         </InputGroup>
         <InputGroup>
           <LabelRegister htmlFor="email">Email:</LabelRegister>
           <InputRegister
             type="text"
             id="email"
-            // autoComplete="off"
-
             ref={props.refEmaill}
-            // required
+            required
           />
         </InputGroup>
         <InputGroup>
           <LabelRegister>Password:</LabelRegister>
-          <InputRegister
-            type="password"
-            id="password"
-            ref={props.refPass}
-            // required
-          />
+          <InputRegister type="password" id="password" ref={props.refPass} />
         </InputGroup>
         <Container>
           <Button type="button" onClick={props.onClickSummit}>

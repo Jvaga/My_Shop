@@ -77,7 +77,7 @@ export const Card = (props: CardProps) => {
                   <AddToCartButton
                     onClick={() => increaseCartQuantity(props._id)}
                   >
-                    + Add To Cart
+                    Add To Cart
                   </AddToCartButton>
                 ) : (
                   <div

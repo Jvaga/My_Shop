@@ -31,7 +31,6 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   color: ${Colors.white};
   font-size: 70px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 30vh 8vw 0 10vw;
   text-transform: uppercase;
   box-shadow: 10px 10px 20px 5px ${Colors.black};
@@ -51,7 +50,6 @@ export const Title = styled.h1`
 export const Text = styled.p`
   color: ${Colors.white};
   font-size: 26px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 5vh 0 0 10vw;
   border-radius: 10px;
 

@@ -1,9 +1,8 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-
 import { useData } from "../../context/ContextItems";
-
 import { Card } from "../../components/cards/cardItem/Card";
+import { Container } from "./Store.css";
 
 export const Store = () => {
   const data = useData();
@@ -11,11 +10,9 @@ export const Store = () => {
 
   return (
     <>
-      <div>
-        <div>
-          <h2>Store</h2>
-        </div>
-      </div>
+      <Container>
+        <h2>Shop</h2>
+      </Container>
 
       {
         <Row md={2} xs={1} lg={3} className="g-3">
