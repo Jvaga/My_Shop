@@ -41,13 +41,19 @@ export const NavbarMobile = () => {
             </Link>
           </Page>
           <Page>
-            <Link to="/store">Store</Link>
+            <Link to="/store" onClick={afterClik}>
+              Store
+            </Link>
           </Page>
           <Page>
-            <Link to="/about">Our Artist</Link>
+            <Link to="/about" onClick={afterClik}>
+              Our Artist
+            </Link>
           </Page>
           <Page>
-            <Link to="/login">Login</Link>
+            <Link to="/login" onClick={afterClik}>
+              Login
+            </Link>
           </Page>
         </Menu>
       ) : null}

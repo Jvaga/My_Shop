@@ -127,6 +127,7 @@ export const AddToCartButton = styled.button`
   width: 100%;
   border-radius: 10px;
   border-color: ${Colors.grey};
+  border: solid 1px black;
 `;
 
 export const QuantityButton = styled.button`
@@ -135,10 +136,12 @@ export const QuantityButton = styled.button`
   width: 30px;
   border-radius: 5px;
   border-color: ${Colors.grey};
+  border: solid 1px black;
 `;
 
 export const RemoveButton = styled.button`
   padding: 10px;
+  border: solid 1px black;
 
   background-color: ${Colors.red};
   border-radius: 10px;

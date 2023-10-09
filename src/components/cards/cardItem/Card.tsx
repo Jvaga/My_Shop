@@ -20,7 +20,6 @@ import {
 } from "./Card.css";
 import { useShoppingCart } from "../../../context/ShoppingCartContext";
 import { formatCurrency } from "../../../utilities/formatCurrency";
-import { Link } from "react-router-dom";
 
 type CardProps = {
   _id: number;

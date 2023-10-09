@@ -2,7 +2,15 @@ import React from "react";
 import { useShoppingCart } from "../../context/ShoppingCartContext";
 import { useData } from "../../context/ContextItems";
 import { formatCurrency } from "../../utilities/formatCurrency";
-import { Container, InfoWrapper } from "./CartItems.css";
+import {
+  Container,
+  InfoWrapper,
+  SinglePrice,
+  ButtomWraper,
+  Img,
+  Buttom,
+  ProductInfo,
+} from "./CartItems.css";
 type CartItemProps = {
   id: number;
   quantity: number;
@@ -28,25 +36,21 @@ export function CartItem(props: CartItemProps) {
   return (
     <Container>
       <InfoWrapper>
-        <img
-          src={item.img}
-          style={{ width: "125px", height: "75px", objectFit: "cover" }}
-          alt={""}
-        />
-        <div>
+        <Img src={item.img} />
+        <ProductInfo>
           <div>{item.name}</div>
-          <div>Quantity: {quantity > 1 && <span>{quantity}</span>}</div>
-          <div>{formatCurrency(item.price * quantity)}</div>
-        </div>
+          <div>Quantity: {quantity > 0 && <span>{quantity}</span>}</div>
+          <div>Total price: {formatCurrency(item.price * quantity)}</div>
+        </ProductInfo>
       </InfoWrapper>
       <InfoWrapper>
-        <div>unidad: {formatCurrency(item.price)}</div>
+        <SinglePrice>unidad: {formatCurrency(item.price)}</SinglePrice>
 
-        <div>
-          <button onClick={() => removeFromCart(item._id)}>&times;</button>
-          <button onClick={() => decreaseCartQuantity(item._id)}>-</button>
-          <button onClick={() => increaseCartQuantity(item._id)}>+</button>
-        </div>
+        <ButtomWraper>
+          <Buttom onClick={() => decreaseCartQuantity(item._id)}>-</Buttom>
+          <Buttom onClick={() => increaseCartQuantity(item._id)}>+</Buttom>
+          <Buttom onClick={() => removeFromCart(item._id)}>&times;</Buttom>
+        </ButtomWraper>
       </InfoWrapper>
     </Container>
   );

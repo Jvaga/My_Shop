@@ -3,8 +3,8 @@ import { styled } from "styled-components";
 import { Colors } from "../../../App.css";
 
 export const Nav = styled.nav`
-  background-color: ${Colors.black};
-  color: ${Colors.white};
+  background-color: ${Colors.light_grey};
+  color: ${Colors.black};
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -26,7 +26,7 @@ export const MenuImg = styled.img`
   border-radius: 50px;
 `;
 
-export const Menu = styled.ul`
+export const Menu = styled.div`
   list-style: none;
   @media (max-width: 600px) {
     align-items: center;
@@ -43,7 +43,7 @@ export const DesktopNavbar = styled.div`
     display: none;
   }
 `;
-export const Page = styled.li`
+export const Page = styled.div`
   text-align: center;
   height: 3rem;
   padding: 1em 0 3em 0;

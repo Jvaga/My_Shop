@@ -2,7 +2,6 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import { Store } from "./pages/store/Store";
-import { Container } from "react-bootstrap";
 import { About } from "./pages/about/About";
 import { Provider as ProviderItem } from "./context/ContextItems";
 import { Provider as ProviderArtist } from "./context/ContextArtist";
@@ -27,7 +26,7 @@ const App = () => {
                 <ShoppingCart />
               </Header>
 
-              <Container className="mb-5" fluid="true">
+              <div>
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="store" element={<Store />} />
@@ -35,7 +34,7 @@ const App = () => {
                   <Route path="login" element={<Login />} />
                   <Route path="singleproduct" element={<SingleProduct />} />
                 </Routes>
-              </Container>
+              </div>
               <Footer />
             </ProviderItem>
           </ProviderArtist>
